@@ -38,7 +38,17 @@ class Calculator {
     etc
      */
     int fibonacciNumberFinder(int n){
-        return 0;
+        int[] array = new int[n];
+        int curr_idx = 0;
+        while (curr_idx < n) {
+            if (curr_idx < 2) {
+                array[curr_idx] = 1;
+            } else {
+                array[curr_idx] = array[curr_idx - 1] + array[curr_idx - 2];
+            }
+            curr_idx++;
+        }
+        return array[n - 1];
     }
 
 
